@@ -1,0 +1,32 @@
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.toggle:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-default);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.iconActive {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  transform: scale(1.05);
+}

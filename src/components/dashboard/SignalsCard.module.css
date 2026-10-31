@@ -1,0 +1,58 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; }
+.header h3 { font-size: 15px; font-weight: 700; }
+.header p { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.live {
+  font-size: 10px;
+  color: var(--brand-primary);
+  font-weight: 700;
+  padding: 4px 8px;
+  background: var(--brand-primary-dim);
+  border-radius: var(--radius-sm);
+}
+
+.signal {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.signalHeader { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.direction {
+  font-size: 10px; padding: 3px 8px;
+  background: var(--brand-primary-dim);
+  color: var(--brand-primary);
+  border-radius: 4px; font-weight: 700;
+}
+.signalHeader strong { font-size: 13px; }
+.leverage { font-size: 10px; color: var(--text-muted); }
+.conviction { margin-left: auto; font-size: 11px; color: var(--text-secondary); }
+
+.signalRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+.signalRow div { display: flex; flex-direction: column; gap: 2px; }
+.signalRow small { font-size: 10px; color: var(--text-muted); }
+.signalRow strong { font-size: 12px; font-family: var(--font-mono); }
+.tp { color: var(--brand-primary); }
+.sl { color: var(--brand-danger); }
+
+.executeBtn {
+  padding: 10px;
+  background: var(--brand-info);
+  color: var(--text-inverse);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 12px;
+}

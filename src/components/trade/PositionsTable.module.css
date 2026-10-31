@@ -1,0 +1,104 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.tabs { display: flex; gap: 2px; }
+.tab,
+.tabActive {
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.tabActive { background: var(--brand-primary); color: var(--text-inverse); }
+
+.actions { display: flex; gap: var(--space-2); }
+.ghostBtn {
+  font-size: 10px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+.table { display: flex; flex-direction: column; font-size: 11px; }
+
+.tableHead,
+.row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.9fr 0.9fr 0.9fr 0.9fr 1.1fr 0.9fr;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-2) var(--space-1);
+}
+
+.tableHead {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.row { border-bottom: 1px solid var(--border-subtle); }
+.row:last-child { border-bottom: none; }
+
+.pairCell { display: flex; align-items: center; gap: var(--space-2); }
+.pairCell strong { display: block; font-size: 11px; }
+.pairCell small { font-size: 9px; color: var(--text-muted); }
+
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dotLong { background: var(--brand-primary); }
+.dotShort { background: var(--brand-danger); }
+
+.side { font-size: 10px; font-weight: 700; }
+.long { color: var(--brand-primary); }
+.short { color: var(--brand-danger); }
+
+.countdown { font-family: var(--font-mono); color: var(--text-secondary); }
+.pnl { font-weight: 700; font-family: var(--font-mono); }
+.pos { color: var(--brand-primary); }
+.neg { color: var(--brand-danger); }
+
+.status {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 4px;
+  text-align: center;
+}
+.inMoney { background: var(--brand-primary-dim); color: var(--brand-primary); }
+.atRisk { background: var(--brand-danger-dim); color: var(--brand-danger); }
+
+@media (max-width: 900px) {
+  .tableHead { display: none; }
+  .row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-1);
+    padding: var(--space-3);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-2);
+  }
+  .pairCell { grid-column: span 2; }
+  .status { grid-column: span 2; }
+}
+
+
+.table { direction: rtl; }
+.tableHead, .row { direction: rtl; }
+.status { font-family: var(--font-sans); }

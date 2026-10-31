@@ -1,0 +1,94 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; }
+.header h3 { font-size: 15px; font-weight: 700; }
+.header p { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.tier {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-primary-dim);
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.trader {
+  display: flex; align-items: center; gap: var(--space-3);
+  background: var(--bg-elevated);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-info));
+  display: grid; place-items: center;
+  color: var(--text-inverse);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.name { font-weight: 700; font-size: 13px; }
+.verified { color: var(--brand-primary); font-size: 12px; }
+.meta { font-size: 11px; color: var(--text-muted); }
+
+.stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.stats div {
+  background: var(--bg-elevated);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.stats small { font-size: 10px; color: var(--text-muted); }
+.stats strong { font-size: 14px; font-family: var(--font-mono); }
+
+.positive { color: var(--brand-primary); }
+.negative { color: var(--brand-danger); }
+
+.executions {
+  display: flex; gap: var(--space-2); align-items: center;
+  font-size: 11px; flex-wrap: wrap;
+  color: var(--text-secondary);
+}
+.executions small { color: var(--text-muted); }
+.executions span {
+  padding: 3px 8px;
+  background: var(--brand-primary-dim);
+  color: var(--brand-primary);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.actions { display: flex; gap: var(--space-2); }
+
+.primaryAction {
+  flex: 1;
+  padding: 11px;
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ghostAction {
+  padding: 11px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 12px;
+}

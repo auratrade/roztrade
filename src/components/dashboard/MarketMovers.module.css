@@ -1,0 +1,76 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header h3 { font-size: 15px; font-weight: 700; }
+.header p { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.tabs { display: flex; gap: var(--space-2); }
+.tabActive,
+.tab {
+  padding: 6px 14px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+}
+.tabActive { background: var(--brand-primary); color: var(--text-inverse); }
+
+.table { display: flex; flex-direction: column; }
+
+.tableHead,
+.row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 0.8fr 0.8fr 0.8fr;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) 0;
+  font-size: 12px;
+}
+
+.tableHead {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.row { border-bottom: 1px solid var(--border-subtle); }
+.row:last-child { border-bottom: none; }
+
+.pair { display: flex; align-items: center; gap: var(--space-2); }
+.pairIcon {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  display: grid; place-items: center;
+  color: var(--brand-primary);
+  font-weight: 800;
+  font-size: 14px;
+}
+.pair strong { font-size: 12px; display: block; }
+.pair small { font-size: 10px; color: var(--text-muted); }
+
+.price { font-family: var(--font-mono); font-weight: 600; }
+.change { color: var(--brand-primary); font-weight: 600; font-family: var(--font-mono); }
+.turnover { color: var(--text-secondary); font-family: var(--font-mono); font-size: 11px; }
+
+@media (max-width: 700px) {
+  .tableHead { display: none; }
+  .row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "pair change" "price spark";
+  }
+  .pair { grid-area: pair; }
+  .change { grid-area: change; text-align: right; }
+  .price { grid-area: price; }
+  .spark { grid-area: spark; }
+  .turnover { display: none; }
+}

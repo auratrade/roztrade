@@ -1,0 +1,26 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-4);
+}
+
+.gridBottom {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 1100px) {
+  .grid2,
+  .gridBottom {
+    grid-template-columns: 1fr;
+  }
+}

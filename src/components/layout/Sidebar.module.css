@@ -1,0 +1,190 @@
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--bg-surface);
+  /* RTL: الحد على اليسار بدل اليمين */
+  border-left: 1px solid var(--border-subtle);
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-3);
+  gap: var(--space-4);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* الباقي كما هو — flexbox سيعمل تلقائيًا مع dir=rtl */
+
+.brand { padding: 0 var(--space-2); }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.logoTitle {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.logoSub {
+  font-size: 10px;
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.account {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.accountLabel {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  box-shadow: 0 0 8px var(--brand-primary);
+}
+
+.accountName {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.accountBalance {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.switchBtn {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-hover);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navItem:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.active {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  font-weight: 700;
+}
+
+.active:hover {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.concierge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.conciergeTitle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.conciergeSub {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.onlineDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  margin-left: auto;
+}
+
+.latency {
+  font-size: 10px;
+  color: var(--text-muted);
+  padding: 0 var(--space-2);
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    padding: var(--space-3);
+  }
+  .nav {
+    flex-direction: row;
+    gap: var(--space-1);
+  }
+  .navItem span { display: none; }
+  .account, .footer { display: none; }
+}
